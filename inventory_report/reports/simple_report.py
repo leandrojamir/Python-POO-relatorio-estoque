@@ -66,9 +66,7 @@ class SimpleReport:
             data_de_fabricacao_item = date.fromisoformat(
                 item["data_de_fabricacao"]
             )
-            if data_de_fabricacao < data_de_fabricacao_item:
-                return data_de_fabricacao
-            else:
+            if data_de_fabricacao > data_de_fabricacao_item:
                 data_de_fabricacao = data_de_fabricacao_item
 
         return data_de_fabricacao
@@ -82,7 +80,8 @@ class SimpleReport:
         # A data de validade mais próxima, somente considera itens que ainda
         # não venceram
         data_validade = [
-            item["data_de_validade"] for item in list
+            item["data_de_validade"]
+            for item in list
             if item["data_de_validade"] >= date.today().isoformat()
         ]
         return min(data_validade)
