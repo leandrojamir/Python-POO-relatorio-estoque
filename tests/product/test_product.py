@@ -55,3 +55,5 @@ def test_cria_produto():
     assert init_product.numero_de_serie == "FR29 5791 5333 58XR G4PR IG28 D08"
     # instrucoes_de_armazenamento (string)
     assert init_product.instrucoes_de_armazenamento == "instrucao 11"
+
+# tests/product/test_product.py::test_cria_produto[Product] PASSED
