@@ -64,10 +64,8 @@ class InventoryRefactor(Iterable):
 
     # @classmethod
     def recuperar_dados_csv_json_xml(self, nome_arquivo: str):
-        print(f"\nvvv\nImporter{self.importer}")
         # <class 'inventory_report.importer.csv_importer.CsvImporter'>
         data_list = self.importer.import_data(nome_arquivo)
-        print(f"\nvvv\ndados_csv_json_xml{data_list}")
         for info in data_list:
             self.data.append(info)
 

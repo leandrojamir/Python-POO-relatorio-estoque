@@ -70,7 +70,7 @@ class CompleteReport(SimpleReport):
                 f"- {nome_da_empresa}: {stock[nome_da_empresa]}"
             )
             result = "\n".join(estoque_empresa)
-            # print(result)
+
         return result
 
 
