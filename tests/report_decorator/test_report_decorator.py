@@ -50,14 +50,12 @@ import json
 
 with open("inventory_report/data/inventory.json") as file:
     json_list = json.load(file)
-print(f"\nVVV\n{json_list}\n^^^")
 
 
 # O nome deste teste deve ser test_decorar_relatorio, ele deve verificar se o
 # relatório está devidamente colorido.
 def test_decorar_relatorio():
     relatorio_decorado = ColoredReport(SimpleReport).generate(json_list)
-    print(f"\nVVV\n{relatorio_decorado}\n^^^")
 
     # Para que o Python consiga colorir as strings, é preciso que a string
     # contenha o início do código da cor, e o reset da cor.
