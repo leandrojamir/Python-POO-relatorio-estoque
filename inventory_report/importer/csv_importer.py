@@ -25,7 +25,6 @@ class CsvImporter(Importer):
         #     "instrucoes_de_armazenamento": "instrucao"
         #   }
         # ]
-        print(CsvImporter.recuperar_dados_csv_json_xml(nome_arquivo))
         return CsvImporter.recuperar_dados_csv_json_xml(nome_arquivo)
 
     @classmethod
